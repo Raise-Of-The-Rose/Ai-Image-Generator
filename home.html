@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page with Animated Texts</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #0df274;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .animated-text {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #333;
+            opacity: 0;
+            animation: fadeIn 3s ease-in-out infinite;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            50% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(20px); }
+        }
+
+        .img{
+            position: relative;
+            background: url(c6406f7a-def2-4767-a191-29189fd6c44b.jpg);
+            width: 800px;
+            height: 600px;
+            background-size: cover;
+        }
+        .img::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            min-height: 100%;
+            background: url();
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="animated-text">Welcome to Our Website</div>
+        <div class="animated-text" style="animation-delay: 1s;">Explore Our Features</div>
+        <div class="animated-text" style="animation-delay: 2s;">Contact Us for More Info</div>
+    </div>
+    <img src="OIP.jpg" alt="">
+</body>
+</html>
